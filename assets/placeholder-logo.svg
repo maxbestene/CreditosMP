@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 120 40">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+        font-family: Arial-Black, 'Arial Black';
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .st1 {
+        fill: #c50ef9;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M17.32,10.98l.78,3.43,2.65-2.32c.79-.69,1.96.16,1.55,1.13l-1.39,3.23,3.5-.32c1.04-.1,1.49,1.29.59,1.82l-3.02,1.8,3.02,1.8c.9.53.45,1.92-.59,1.82l-3.5-.32,1.39,3.23c.41.96-.76,1.81-1.55,1.13l-2.65-2.32-.78,3.43c-.23,1.02-1.68,1.02-1.91,0l-.78-3.43-2.65,2.32c-.79.69-1.96-.16-1.55-1.13l1.39-3.23-3.5.32c-1.04.1-1.49-1.29-.59-1.82l3.02-1.8-3.02-1.8c-.9-.53-.45-1.92.59-1.82l3.5.32-1.39-3.23c-.41-.96.76-1.81,1.55-1.13l2.65,2.32.78-3.43c.23-1.02,1.68-1.02,1.91,0Z"/>
+  <text class="st0" transform="translate(30.71 23.76)"><tspan x="0" y="0">CREDITOS</tspan></text>
+</svg>

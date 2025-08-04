@@ -1,0 +1,859 @@
+/* Override CSS - Hero Layout with Video on Right */
+
+/* Force remove background from all possible selectors */
+#home,
+#section_269cc9fe3,
+#content-37 #home,
+#content-37 #section_269cc9fe3,
+.hero-section,
+.smp-section#home {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+#home > .smp-bg-video,
+#section_269cc9fe3 > .smp-bg-video {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+/* Ensure body background doesn't interfere */
+body {
+    background-color: var(--color-black) !important;
+}
+
+/* Override existing hero padding/margins */
+#home {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow-x: visible !important;
+    overflow-y: hidden !important;
+    width: 100% !important;
+}
+
+/* Override container width for hero section */
+#home .smp-container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+/* Override container width for navigation section */
+.nav_qrd90ms48 .smp-container,
+#navbar-top .smp-container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 2rem !important;
+    width: 100% !important;
+}
+
+/* Navigation full width */
+.nav_qrd90ms48,
+#navbar-top {
+    width: 100% !important;
+}
+
+/* Navigation grid adjustments */
+.nav_qrd90ms48 #navbar-top #row-navbar-top {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Navigation columns full width adjustments */
+.nav_qrd90ms48 #content_rwocl2vyf {
+    padding-left: 2rem !important;
+    padding-right: 0 !important;
+}
+
+.nav_qrd90ms48 #column_1yhrkxrho {
+    padding-right: 2rem !important;
+    padding-left: 0 !important;
+}
+
+/* Ensure navigation elements reach screen edges */
+.nav_qrd90ms48 #column_xxm5jhdji,
+.nav_qrd90ms48 #column_1yhrkxrho {
+    width: 100% !important;
+}
+
+/* Hero Layout - Content Left, Video Background Right */
+.hero-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: visible;
+    overflow-y: hidden;
+    align-items: center;
+    width: 100%;
+}
+
+/* Left Column: Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 2rem 2rem 5rem;
+    z-index: 10;
+    position: relative;
+    max-width: 100%;
+    overflow: visible;
+}
+
+/* Individual hero content spacing */
+.hero-content .smp-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure text visibility in hero section */
+.hero-content h1,
+.hero-content p,
+.hero-content a {
+    color: white !important;
+    z-index: 15;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content h1 {
+    font-size: 2.4rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+}
+
+.hero-content p {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+}
+
+.hero-content .is-content {
+    z-index: 15 !important;
+    position: relative !important;
+}
+
+/* Force hero content to be visible (override animation opacity) */
+.hero-content .animate-on-scroll,
+.hero-content .smp-content {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Ensure hero section content is always visible */
+#home .animate-on-scroll {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+/* Additional fallback styles for hero text */
+#home h1,
+#home p,
+#home a,
+#home .is-content {
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Fix negative margins on ALL hero content containers */
+#content_13e5af9ec,
+#content_ae35e15d0,
+#content_7b99e717a {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Subtitle spacing */
+#content_ae35e15d0 {
+    margin-bottom: 60px !important;
+}
+
+/* CTA Button - Adapt to content */
+#content_7b99e717a .is-content {
+    display: inline-block !important;
+    width: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    background-color: var(--color-primary) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+#content_7b99e717a .is-content a {
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    color: var(--color-black) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+    border-radius: 8px !important;
+    text-shadow: none !important;
+}
+
+#content_7b99e717a .is-content:hover {
+    background-color: var(--color-white) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+#content_7b99e717a .is-content:hover a {
+    color: var(--color-black) !important;
+    text-shadow: none !important;
+}
+
+/* Ensure margin 0 across all responsive breakpoints for ALL hero elements */
+@media screen and (max-width: 543.98px) {
+    #content_13e5af9ec,
+    #content_ae35e15d0,
+    #content_7b99e717a {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Subtitle spacing - Mobile */
+    #content_ae35e15d0 {
+        margin-bottom: 40px !important;
+    }
+}
+
+@media screen and (min-width: 544px) and (max-width: 767.98px) {
+    #content_13e5af9ec,
+    #content_ae35e15d0,
+    #content_7b99e717a {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Subtitle spacing - Tablet */
+    #content_ae35e15d0 {
+        margin-bottom: 50px !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    #content_13e5af9ec,
+    #content_ae35e15d0,
+    #content_7b99e717a {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Subtitle spacing - Desktop small */
+    #content_ae35e15d0 {
+        margin-bottom: 60px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #content_13e5af9ec,
+    #content_ae35e15d0,
+    #content_7b99e717a {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Subtitle spacing - Desktop large */
+    #content_ae35e15d0 {
+        margin-bottom: 60px !important;
+    }
+}
+
+/* Specific styling for the main heading */
+#content_13e5af9ec h1 {
+    color: white !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 80px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: 20 !important;
+    position: relative !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    margin: 0 !important;
+}
+
+/* Animated word styles */
+.animated-word {
+    display: inline-block;
+    position: relative;
+    color: var(--color-primary) !important;
+}
+
+/* Individual letter animation */
+.animated-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: var(--color-primary) !important;
+}
+
+.animated-letter.letter-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.animated-letter.letter-out {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* Right Column: Video Background Container */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+    overflow: visible;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Video Styles for Background */
+.hero-video-container .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 120%;
+    height: 100%;
+    min-width: 120%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Video Overlay for Background */
+.hero-video-container .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(204, 51, 255, 0.1) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    z-index: 2;
+}
+
+
+
+/* Video Controls for Background */
+.hero-video-container .video-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+/* Fade edge to blend video with content */
+.hero-video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--color-black) 0%,
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(0, 0, 0, 0.8) 40%,
+        rgba(0, 0, 0, 0.4) 70%,
+        rgba(0, 0, 0, 0.1) 90%,
+        transparent 100%
+    );
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Responsive Design for Hero Layout */
+@media screen and (max-width: 768px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+        padding: 0;
+        overflow: visible;
+        width: 100%;
+    }
+    
+    .hero-content {
+        order: 1;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 1rem;
+        margin: 1.5rem;
+        max-width: calc(100% - 3rem);
+        overflow: visible;
+    }
+    
+    .hero-content h1 {
+        font-family: "Inter", Arial, sans-serif !important;
+        font-size: 60px !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* CTA responsive - Tablet */
+    #content_7b99e717a .is-content a {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+        text-shadow: none !important;
+    }
+    
+    /* Animated letters responsive - Tablet */
+    .animated-letter {
+        font-size: 60px !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .hero-video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .hero-video-container::before {
+        background: linear-gradient(
+            180deg,
+            var(--color-black) 0%,
+            rgba(0, 0, 0, 0.8) 20%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.8) 80%,
+            var(--color-black) 100%
+        );
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content {
+        margin: 1rem;
+        padding: 2rem 1.2rem;
+        gap: 1.2rem;
+        max-width: calc(100% - 2rem);
+    }
+    
+    .hero-layout {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero-content h1 {
+        font-family: "Inter", Arial, sans-serif !important;
+        font-size: 40px !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+    }
+    
+    /* CTA responsive - Mobile */
+    #content_7b99e717a .is-content a {
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+        text-shadow: none !important;
+    }
+    
+    /* Animated letters responsive - Mobile */
+    .animated-letter {
+        font-size: 40px !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .hero-video-container .video-controls {
+        bottom: 1rem;
+        right: 1rem;
+        scale: 0.8;
+    }
+}
+
+/* Enhanced video scaling for larger screens */
+@media screen and (min-width: 1400px) {
+    .hero-video-container .hero-video {
+        width: 130%;
+        height: 110%;
+    }
+    
+    .hero-content h1 {
+        font-family: "Inter", Arial, sans-serif !important;
+        font-size: 90px !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+    }
+    
+    /* CTA responsive - Large screens */
+    #content_7b99e717a .is-content a {
+        padding: 14px 28px !important;
+        font-size: 17px !important;
+        text-shadow: none !important;
+    }
+    
+    /* Animated letters responsive - Large screens */
+    .animated-letter {
+        font-size: 90px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-content {
+        padding: 2rem 3rem 2rem 6rem;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-family: "Inter", Arial, sans-serif !important;
+        font-size: 80px !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+    }
+    
+    /* CTA responsive - Desktop */
+    #content_7b99e717a .is-content a {
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+        text-shadow: none !important;
+    }
+    
+    /* Animated letters responsive - Desktop */
+    .animated-letter {
+        font-size: 80px !important;
+    }
+    
+    .hero-video-container::before {
+        width: 180px;
+    }
+    
+    .hero-layout {
+        width: 100%;
+        padding: 0;
+    }
+    
+    /* Navigation responsive adjustments */
+    .nav_qrd90ms48 .smp-container,
+    #navbar-top .smp-container {
+        padding: 0 3rem !important;
+    }
+    
+    .nav_qrd90ms48 #content_rwocl2vyf {
+        padding-left: 3rem !important;
+    }
+    
+    .nav_qrd90ms48 #column_1yhrkxrho {
+        padding-right: 3rem !important;
+    }
+}
+
+/* Navigation responsive for tablets and mobile */
+@media screen and (max-width: 768px) {
+    .nav_qrd90ms48 .smp-container,
+    #navbar-top .smp-container {
+        padding: 0 1rem !important;
+    }
+    
+    .nav_qrd90ms48 #content_rwocl2vyf {
+        padding-left: 1rem !important;
+    }
+    
+    .nav_qrd90ms48 #column_1yhrkxrho {
+        padding-right: 1rem !important;
+    }
+}
+
+/* Ensure body and html height for sticky effect */
+body, html {
+    height: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Browser compatibility for sticky positioning - Only for our sticky elements */
+
+/* Layered Cards Section Styles */
+.products-section {
+    padding: 80px 0;
+    background: var(--color-black);
+    position: relative;
+    overflow: visible !important; /* Override smp-section overflow hidden */
+}
+
+/* Force sticky behavior - override any conflicting styles with maximum specificity */
+.smp-section.products-section,
+section.smp-section.products-section,
+section#services.smp-section.products-section,
+#services.smp-section.products-section {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: block !important;
+}
+
+/* Additional override for any container that might interfere */
+.smp-section.products-section .layered-card-section-cards-container,
+section.smp-section.products-section .layered-card-section-cards-container {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    position: relative !important;
+}
+
+.layered-card-section-cards-container,
+.products-section .layered-card-section-cards-container,
+#services .layered-card-section-cards-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    position: relative !important;
+    min-height: 400vh !important; /* Increased height for better effect */
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    display: block !important;
+}
+
+.layered-card-section-card-sticky-wrapper,
+.products-section .layered-card-section-card-sticky-wrapper,
+#services .layered-card-section-card-sticky-wrapper {
+    height: 100vh !important; /* Each wrapper takes full viewport height */
+    display: flex !important;
+    align-items: flex-start !important;
+    padding-top: 100px !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.layered-card-section-card-container,
+.products-section .layered-card-section-card-container,
+section.products-section .layered-card-section-card-container,
+#services .layered-card-section-card-container {
+    position: sticky !important;
+    position: -webkit-sticky !important; /* Safari support */
+    z-index: 10 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Overlapping sticky positions - Cards overlay from bottom to top */
+.layered-card-section-card-sticky-wrapper:nth-child(1) .layered-card-section-card-container,
+.products-section .layered-card-section-card-sticky-wrapper:nth-child(1) .layered-card-section-card-container,
+#services .layered-card-section-card-sticky-wrapper:nth-child(1) .layered-card-section-card-container {
+    top: 100px !important;
+    z-index: 1 !important; /* Lowest z-index - gets covered */
+}
+
+.layered-card-section-card-sticky-wrapper:nth-child(2) .layered-card-section-card-container,
+.products-section .layered-card-section-card-sticky-wrapper:nth-child(2) .layered-card-section-card-container,
+#services .layered-card-section-card-sticky-wrapper:nth-child(2) .layered-card-section-card-container {
+    top: 100px !important; /* Same position - overlaps card 1 */
+    z-index: 2 !important;
+}
+
+.layered-card-section-card-sticky-wrapper:nth-child(3) .layered-card-section-card-container,
+.products-section .layered-card-section-card-sticky-wrapper:nth-child(3) .layered-card-section-card-container,
+#services .layered-card-section-card-sticky-wrapper:nth-child(3) .layered-card-section-card-container {
+    top: 100px !important; /* Same position - overlaps card 2 */
+    z-index: 3 !important;
+}
+
+.layered-card-section-card-sticky-wrapper:nth-child(4) .layered-card-section-card-container,
+.products-section .layered-card-section-card-sticky-wrapper:nth-child(4) .layered-card-section-card-container,
+#services .layered-card-section-card-sticky-wrapper:nth-child(4) .layered-card-section-card-container {
+    top: 100px !important; /* Same position - overlaps card 3 */
+    z-index: 4 !important; /* Highest z-index - stays on top */
+}
+
+.layered-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: var(--color-black);
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.layered-card h3 {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    color: var(--color-black);
+}
+
+.layered-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #666;
+}
+
+.layered-card a {
+    display: inline-block !important;
+    padding: 12px 24px;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-primary);
+    width: auto !important;
+    white-space: nowrap !important;
+    max-width: none !important;
+}
+
+.layered-card a:hover {
+    background: #8B5CF6;
+    border-color: #8B5CF6;
+    transform: translateY(-2px);
+}
+
+/* Responsive design for layered cards */
+@media screen and (max-width: 768px) {
+    .products-section {
+        padding: 60px 0;
+    }
+    
+    .layered-card-section-cards-container {
+        padding: 0 1rem;
+        min-height: 350vh;
+    }
+    
+    .layered-card-section-card-sticky-wrapper {
+        height: 80vh;
+        padding-top: 80px;
+    }
+    
+    /* Overlapping positions for tablet - same top value */
+    .layered-card-section-card-sticky-wrapper:nth-child(1) .layered-card-section-card-container {
+        top: 80px !important;
+        z-index: 1 !important;
+    }
+    
+    .layered-card-section-card-sticky-wrapper:nth-child(2) .layered-card-section-card-container {
+        top: 80px !important;
+        z-index: 2 !important;
+    }
+    
+    .layered-card-section-card-sticky-wrapper:nth-child(3) .layered-card-section-card-container {
+        top: 80px !important;
+        z-index: 3 !important;
+    }
+    
+    .layered-card-section-card-sticky-wrapper:nth-child(4) .layered-card-section-card-container {
+        top: 80px !important;
+        z-index: 4 !important;
+    }
+    
+    .layered-card {
+        padding: 1.5rem;
+        height: 400px; /* Altura reducida para tablet */
+        border-radius: 30px; /* Bordes proporcionales */
+    }
+    
+    .layered-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .layered-card p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .layered-card-section-cards-container {
+        padding: 0 0.5rem;
+        min-height: 300vh;
+    }
+    
+    .layered-card-section-card-sticky-wrapper {
+        height: 70vh;
+        padding-top: 60px;
+    }
+    
+    /* Overlapping positions for mobile - same top value */
+    .layered-card-section-card-sticky-wrapper:nth-child(1) .layered-card-section-card-container {
+        top: 60px !important;
+        z-index: 1 !important;
+    }
+    
+    .layered-card-section-card-sticky-wrapper:nth-child(2) .layered-card-section-card-container {
+        top: 60px !important;
+        z-index: 2 !important;
+    }
+    
+    .layered-card-section-card-sticky-wrapper:nth-child(3) .layered-card-section-card-container {
+        top: 60px !important;
+        z-index: 3 !important;
+    }
+    
+    .layered-card-section-card-sticky-wrapper:nth-child(4) .layered-card-section-card-container {
+        top: 60px !important;
+        z-index: 4 !important;
+    }
+    
+    .layered-card {
+        padding: 1rem;
+        height: 320px; /* Altura compacta para móvil */
+        border-radius: 20px; /* Bordes proporcionales */
+    }
+    
+    .layered-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .layered-card p {
+        font-size: 0.9rem;
+    }
+}

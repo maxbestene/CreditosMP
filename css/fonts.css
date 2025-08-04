@@ -1,0 +1,265 @@
+/* Font Definitions */
+
+/* Custom Fonts */
+@font-face { 
+    font-family: "amerigo-bt"; 
+    src: url("https://corsair.works/wp-content/uploads/2025/05/amerigo-bt.ttf") format("truetype");
+}
+
+/* Default System Fonts */
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("https://corsair.works/wp-content/themes/semplice7/assets/fonts/inter.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Satoshi-Variable";
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url("https://corsair.works/wp-content/themes/semplice7/assets/fonts/satoshi.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Satoshi-VariableItalic";
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url("https://corsair.works/wp-content/themes/semplice7/assets/fonts/satoshi-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gambetta-Variable";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("https://corsair.works/wp-content/themes/semplice7/assets/fonts/gambetta.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gambetta-VariableItalic";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("https://corsair.works/wp-content/themes/semplice7/assets/fonts/gambetta-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url("https://corsair.works/wp-content/themes/semplice7/assets/fonts/source-code-pro.ttf") format("truetype");
+}
+
+/* Font Classes */
+.font_0phbshn51, 
+[data-font="font_0phbshn51"], 
+[data-font="font_0phbshn51"] li a, 
+#content-holder h1, 
+#content-holder h2, 
+#content-holder h3, 
+#content-holder h4, 
+#content-holder h5, 
+#content-holder h6 {
+    font-family: "amerigo-bt", sans-serif;
+    font-weight: 400;
+    font-variation-settings: normal;
+    font-style: normal;
+}
+
+.font_4tlgx2kwq, 
+[data-font="font_4tlgx2kwq"], 
+[data-font="font_4tlgx2kwq"] li a {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 400;
+    font-variation-settings: normal;
+    font-style: normal;
+}
+
+/* System Font Weights */
+.light,
+[data-font="light"],
+[data-font="light"] li a {
+    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.regular,
+[data-font="regular"],
+[data-font="regular"] li a {
+    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.medium,
+[data-font="medium"],
+[data-font="medium"] li a {
+    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.semibold,
+[data-font="semibold"],
+[data-font="semibold"] li a {
+    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.bold,
+[data-font="bold"],
+[data-font="bold"] li a {
+    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+/* Italic Variants */
+.light_italic,
+[data-font="light_italic"],
+[data-font="light_italic"] li a {
+    font-family: "Satoshi-VariableItalic", Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.regular_italic,
+[data-font="regular_italic"],
+[data-font="regular_italic"] li a {
+    font-family: "Satoshi-VariableItalic", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.medium_italic,
+[data-font="medium_italic"],
+[data-font="medium_italic"] li a {
+    font-family: "Satoshi-VariableItalic", Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.semibold_italic,
+[data-font="semibold_italic"],
+[data-font="semibold_italic"] li a {
+    font-family: "Satoshi-VariableItalic", Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.bold_italic,
+[data-font="bold_italic"],
+[data-font="bold_italic"] li a {
+    font-family: "Satoshi-VariableItalic", Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+/* Serif Variants */
+.serif_light,
+[data-font="serif_light"],
+[data-font="serif_light"] li a {
+    font-family: "Gambetta-Variable", Times, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.serif_regular,
+[data-font="serif_regular"],
+[data-font="serif_regular"] li a {
+    font-family: "Gambetta-Variable", Times, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.serif_medium,
+[data-font="serif_medium"],
+[data-font="serif_medium"] li a {
+    font-family: "Gambetta-Variable", Times, serif;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.serif_semibold,
+[data-font="serif_semibold"],
+[data-font="serif_semibold"] li a {
+    font-family: "Gambetta-Variable", Times, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.serif_bold,
+[data-font="serif_bold"],
+[data-font="serif_bold"] li a {
+    font-family: "Gambetta-Variable", Times, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+/* Inter Font Variants */
+.inter_light,
+[data-font="inter_light"],
+[data-font="inter_light"] li a {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.inter_regular,
+[data-font="inter_regular"],
+[data-font="inter_regular"] li a {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.inter_medium,
+[data-font="inter_medium"],
+[data-font="inter_medium"] li a {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.inter_semibold,
+[data-font="inter_semibold"],
+[data-font="inter_semibold"] li a {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: normal;
+}
+
+.inter_bold,
+[data-font="inter_bold"],
+[data-font="inter_bold"] li a {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: normal;
+}
