@@ -844,12 +844,13 @@ function initTextBlockAnimation() {
         transform: translateY(50px);
         filter: blur(4px);
         opacity: 0;
+        font-weight: 700;
     `;
     firstLine.textContent = line1Words.join(' ');
     lineSpans.push(firstLine);
     textBlock.appendChild(firstLine);
     
-    // Create second line
+    // Create second line with colored "acá"
     const secondLine = document.createElement('span');
     secondLine.className = 'text-line';
     secondLine.style.cssText = `
@@ -857,29 +858,80 @@ function initTextBlockAnimation() {
         transform: translateY(50px);
         filter: blur(4px);
         opacity: 0;
+        font-weight: 700;
     `;
-    secondLine.textContent = line2Words.join(' ');
+    
+    // Create the second line text with colored "acá"
+    const secondLineText = line2Words.join(' ');
+    const acaIndex = secondLineText.indexOf('acá');
+    
+    if (acaIndex !== -1) {
+        // Split the text around "acá"
+        const beforeAca = secondLineText.substring(0, acaIndex);
+        const afterAca = secondLineText.substring(acaIndex + 3);
+        
+        // Create spans for each part
+        const beforeSpan = document.createElement('span');
+        beforeSpan.textContent = beforeAca;
+        beforeSpan.style.fontWeight = '700';
+        
+        const acaSpan = document.createElement('span');
+        acaSpan.textContent = 'acá';
+        acaSpan.style.color = '#c50ef9';
+        acaSpan.style.fontWeight = '700';
+        
+        const afterSpan = document.createElement('span');
+        afterSpan.textContent = afterAca;
+        afterSpan.style.fontWeight = '700';
+        
+        // Append all parts to the line
+        secondLine.appendChild(beforeSpan);
+        secondLine.appendChild(acaSpan);
+        secondLine.appendChild(afterSpan);
+    } else {
+        secondLine.textContent = secondLineText;
+    }
+    
     lineSpans.push(secondLine);
     textBlock.appendChild(secondLine);
     
     // Clean up temp element
     document.body.removeChild(tempDiv);
     
-    // Observe text block for animation trigger
+    // Function to reset lines to initial state
+    function resetLines() {
+        lineSpans.forEach((line) => {
+            line.style.transition = 'none';
+            line.style.transform = 'translateY(50px)';
+            line.style.filter = 'blur(4px)';
+            line.style.opacity = '0';
+        });
+    }
+    
+    // Function to animate lines
+    function animateLines() {
+        lineSpans.forEach((line, index) => {
+            setTimeout(() => {
+                line.style.transition = 'all 0.8s ease-in-out';
+                line.style.transform = 'translateY(0)';
+                line.style.filter = 'blur(0px)';
+                line.style.opacity = '1';
+            }, index * 200 + 300); // 200ms delay between lines, 300ms initial delay
+        });
+    }
+
+    // Observe text block for animation trigger - repeatable
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Animate each line with staggered delay
-                lineSpans.forEach((line, index) => {
-                    setTimeout(() => {
-                        line.style.transition = 'all 0.8s ease-out';
-                        line.style.transform = 'translateY(0)';
-                        line.style.filter = 'blur(0px)';
-                        line.style.opacity = '1';
-                    }, index * 200 + 300); // 200ms delay between lines, 300ms initial delay
-                });
-                
-                observer.unobserve(entry.target);
+                // Reset and animate when entering viewport
+                resetLines();
+                setTimeout(() => {
+                    animateLines();
+                }, 100); // Small delay to ensure reset is applied
+            } else {
+                // Reset when leaving viewport
+                resetLines();
             }
         });
     }, {
