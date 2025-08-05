@@ -65,8 +65,8 @@
 #content-holder h4, 
 #content-holder h5, 
 #content-holder h6 {
-    font-family: "amerigo-bt", sans-serif;
-    font-weight: 400;
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 600;
     font-variation-settings: normal;
     font-style: normal;
 }
@@ -84,7 +84,7 @@
 .light,
 [data-font="light"],
 [data-font="light"] li a {
-    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-variation-settings: normal;
@@ -93,7 +93,7 @@
 .regular,
 [data-font="regular"],
 [data-font="regular"] li a {
-    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: normal;
@@ -102,7 +102,7 @@
 .medium,
 [data-font="medium"],
 [data-font="medium"] li a {
-    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 500;
     font-style: normal;
     font-variation-settings: normal;
@@ -111,7 +111,7 @@
 .semibold,
 [data-font="semibold"],
 [data-font="semibold"] li a {
-    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-variation-settings: normal;
@@ -120,7 +120,7 @@
 .bold,
 [data-font="bold"],
 [data-font="bold"] li a {
-    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-variation-settings: normal;

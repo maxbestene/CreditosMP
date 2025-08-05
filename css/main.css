@@ -74,7 +74,7 @@
 body {
     background-color: var(--color-black);
     color: var(--color-white);
-    font-family: "Satoshi-Variable", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -178,8 +178,8 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "amerigo-bt", sans-serif;
-    font-weight: 400;
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
 }

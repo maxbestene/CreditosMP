@@ -1,16 +1,5 @@
 /* Override CSS - Hero Layout with Video on Right */
 
-/* ===============================================
-   COLOR OVERRIDES - Keep the new purple color
-   =============================================== */
-
-/* Force new primary color */
-:root {
-    --color-primary: #c50ef9;
-    --color-purple: #c50ef9;
-    --wp--preset--color--vivid-purple: #c50ef9;
-}
-
 /* Force remove background from all possible selectors */
 #home,
 #section_269cc9fe3,
@@ -680,13 +669,13 @@ section#services.smp-section.products-section,
     isolation: auto !important;
 }
 
-/* Main container - PROGRESSIVE APPEARANCE - Cards appear one by one while scrolling */
+/* Main container */
 .layered-card-section-cards-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
-    min-height: 300vh; /* Sufficient scroll space for progressive effect */
+    min-height: 500vh; /* Enough scroll space for sticky effect */
     /* Ensure container doesn't break sticky */
     contain: none !important;
     transform: none !important;
@@ -694,31 +683,28 @@ section#services.smp-section.products-section,
     isolation: auto !important;
 }
 
-/* PROGRESSIVE APPEARANCE - Cards appear at different scroll points */
-.layered-card-section-card-sticky-wrapper:nth-child(1) {
-    height: 300vh; /* Card 1 - available for entire section */
+/* Each card wrapper - adjusted heights to keep all cards visible */
+.layered-card-section-card-sticky-wrapper {
+    height: 150vh; /* Increased height so cards stay sticky longer */
 }
 
+/* Last wrapper gets more height to ensure all cards remain visible */
+.layered-card-section-card-sticky-wrapper:last-child {
+    height: 200vh; /* Extra height to keep all previous cards in sticky position */
+}
+
+/* Forzar stacking visual de tarjetas sticky */
 .layered-card-section-card-sticky-wrapper:nth-child(2) {
-    height: 225vh; /* Card 2 - appears after some scroll */
+    margin-top: -200px !important;
 }
 
 .layered-card-section-card-sticky-wrapper:nth-child(3) {
-    height: 150vh; /* Card 3 - appears later */
+    margin-top: -200px !important;
 }
 
-
-
-/* Forzar stacking visual de tarjetas sticky - 90% overlap entre cards */
-.layered-card-section-card-sticky-wrapper:nth-child(2) {
-    margin-top: -495px !important; /* 90% overlap (card height ~550px) */
+.layered-card-section-card-sticky-wrapper:nth-child(4) {
+    margin-top: -200px !important;
 }
-
-.layered-card-section-card-sticky-wrapper:nth-child(3) {
-    margin-top: -495px !important; /* 90% overlap */
-}
-
-
 
 .layered-card-section-card-container {
     position: sticky !important;
@@ -737,68 +723,36 @@ section#services.smp-section.products-section,
     z-index: 3 !important;
 }
 
-
+.layered-card-section-card-sticky-wrapper:nth-child(4) .layered-card-section-card-container {
+    z-index: 4 !important;
+}
 
 .layered-card {
-    position: relative;
-    padding: 0;
+    background-color: white;
+    padding: 2rem;
     border-radius: 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: var(--color-black);
     height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Background images específicas para cada card */
-.layered-card-section-card-sticky-wrapper:nth-child(1) .layered-card {
-    background-image: url('../assets/linea-de-credito.png');
-}
-
-.layered-card-section-card-sticky-wrapper:nth-child(2) .layered-card {
-    background-image: url('../assets/paga-en-cuotas-fijas.png');
-}
-
-.layered-card-section-card-sticky-wrapper:nth-child(3) .layered-card {
-    background-image: url('../assets/tarjeta-empresarial.png');
-}
-
-
-
-/* Overlay removido por solicitud del usuario */
-
-/* Contenedor de contenido posicionado a la izquierda */
-.layered-card-content {
-    position: relative;
-    z-index: 2;
-    width: 50%;
-    margin-left: 0;
-    align-self: flex-start;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
 }
 
 .layered-card h3 {
     font-family: "Inter", Arial, sans-serif;
-    font-size: 50px;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.2;
     margin: 0 0 1rem 0;
-    color: white;
+    color: var(--color-black);
 }
 
 .layered-card p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
-    color: white;
+    color: #666;
 }
 
 .layered-card a {
@@ -814,7 +768,6 @@ section#services.smp-section.products-section,
     width: auto !important;
     white-space: nowrap !important;
     max-width: none !important;
-    margin-top: auto;
 }
 
 .layered-card a:hover {
@@ -829,25 +782,20 @@ section#services.smp-section.products-section,
         padding: 0 1rem;
     }
     
-    /* PROGRESSIVE APPEARANCE MOBILE */
-    .layered-card-section-card-sticky-wrapper:nth-child(1) {
-        height: 300vh; /* Card 1 mobile */
+    /* Adjust wrapper heights for mobile */
+    .layered-card-section-card-sticky-wrapper {
+        height: 120vh;
     }
     
-    .layered-card-section-card-sticky-wrapper:nth-child(2) {
-        height: 225vh; /* Card 2 mobile */
+    .layered-card-section-card-sticky-wrapper:last-child {
+        height: 160vh;
     }
     
-    .layered-card-section-card-sticky-wrapper:nth-child(3) {
-        height: 150vh; /* Card 3 mobile */
-    }
-    
-
-    
-    /* Adjust negative margin-top for mobile - 90% overlap */
+    /* Adjust negative margin-top for mobile */
     .layered-card-section-card-sticky-wrapper:nth-child(2),
-    .layered-card-section-card-sticky-wrapper:nth-child(3) {
-        margin-top: -315px; /* 90% overlap on mobile (card height ~350px) */
+    .layered-card-section-card-sticky-wrapper:nth-child(3),
+    .layered-card-section-card-sticky-wrapper:nth-child(4) {
+        margin-top: -150px; /* Less overlap on mobile */
     }
     
     .layered-card-section-card-container {
@@ -855,22 +803,17 @@ section#services.smp-section.products-section,
     }
     
     .layered-card {
+        padding: 1.5rem;
         height: 350px;
         border-radius: 30px;
     }
     
-    .layered-card-content {
-        width: 70%;
-    }
-    
     .layered-card h3 {
-        font-size: 40px;
-        line-height: 1;
+        font-size: 1.5rem;
     }
     
     .layered-card p {
         font-size: 1rem;
-        margin: 0;
     }
 }
 
@@ -879,25 +822,20 @@ section#services.smp-section.products-section,
         padding: 0 1rem;
     }
     
-    /* PROGRESSIVE APPEARANCE SMALL MOBILE */
-    .layered-card-section-card-sticky-wrapper:nth-child(1) {
-        height: 300vh; /* Card 1 small mobile */
+    /* Adjust wrapper heights for small mobile */
+    .layered-card-section-card-sticky-wrapper {
+        height: 110vh;
     }
     
-    .layered-card-section-card-sticky-wrapper:nth-child(2) {
-        height: 225vh; /* Card 2 small mobile */
+    .layered-card-section-card-sticky-wrapper:last-child {
+        height: 140vh;
     }
     
-    .layered-card-section-card-sticky-wrapper:nth-child(3) {
-        height: 150vh; /* Card 3 small mobile */
-    }
-    
-
-    
-    /* Overlap on small mobile - 90% overlap */
+    /* Even less overlap on small mobile */
     .layered-card-section-card-sticky-wrapper:nth-child(2),
-    .layered-card-section-card-sticky-wrapper:nth-child(3) {
-        margin-top: -270px; /* 90% overlap on small mobile (card height ~300px) */
+    .layered-card-section-card-sticky-wrapper:nth-child(3),
+    .layered-card-section-card-sticky-wrapper:nth-child(4) {
+        margin-top: -120px;
     }
     
     .layered-card-section-card-container {
@@ -905,21 +843,16 @@ section#services.smp-section.products-section,
     }
     
     .layered-card {
+        padding: 1.5rem;
         height: 300px;
         border-radius: 20px;
     }
     
-    .layered-card-content {
-        width: 80%;
-    }
-    
     .layered-card h3 {
-        font-size: 32px;
-        line-height: 1;
+        font-size: 1.25rem;
     }
     
     .layered-card p {
         font-size: 0.95rem;
-        margin: 0;
     }
 }
