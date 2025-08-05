@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initVideoBackground();
     initAnimatedWord();
+    initTextBlockAnimation();
     
     console.log('Corsair AI Landing Page initialized');
 });
@@ -132,6 +133,16 @@ function animatePortfolioItems(section) {
 
 // Services section animation
 function animateServicesSection(section) {
+    // Check if this is the layered cards section
+    const layeredCardsContainer = section.querySelector('.layered-card-section-cards-container');
+    
+    if (layeredCardsContainer) {
+        // For layered cards, don't apply any transforms that could interfere with sticky positioning
+        console.log('Layered cards section detected - skipping transforms to preserve sticky positioning');
+        return;
+    }
+    
+    // Original splitscreen animation for other sections
     const splitscreen = section.querySelector('.apg-splitscreen');
     if (splitscreen) {
         setTimeout(() => {
@@ -790,11 +801,101 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
 });
 
+// Text Block Line Animation
+function initTextBlockAnimation() {
+    const textBlock = document.querySelector('.text-block-content h2');
+    if (!textBlock) return;
+
+    // Get the original text
+    const originalText = textBlock.textContent;
+    
+    // Create a temporary element to measure line breaks
+    const tempDiv = document.createElement('div');
+    tempDiv.style.cssText = `
+        position: absolute;
+        visibility: hidden;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 65px;
+        font-weight: 700;
+        line-height: 1;
+        max-width: 900px;
+        word-wrap: break-word;
+    `;
+    tempDiv.textContent = originalText;
+    document.body.appendChild(tempDiv);
+    
+    // Split text into words and create spans
+    const words = originalText.split(' ');
+    textBlock.innerHTML = '';
+    
+    let lineSpans = [];
+    
+    // For this specific text, split into 2 lines for desktop
+    // Line 1: "El siguiente nivel para"  
+    // Line 2: "tu negocio está acá"
+    const line1Words = words.slice(0, 4); // First 4 words
+    const line2Words = words.slice(4);    // Remaining words
+    
+    // Create first line
+    const firstLine = document.createElement('span');
+    firstLine.className = 'text-line';
+    firstLine.style.cssText = `
+        display: block;
+        transform: translateY(50px);
+        filter: blur(4px);
+        opacity: 0;
+    `;
+    firstLine.textContent = line1Words.join(' ');
+    lineSpans.push(firstLine);
+    textBlock.appendChild(firstLine);
+    
+    // Create second line
+    const secondLine = document.createElement('span');
+    secondLine.className = 'text-line';
+    secondLine.style.cssText = `
+        display: block;
+        transform: translateY(50px);
+        filter: blur(4px);
+        opacity: 0;
+    `;
+    secondLine.textContent = line2Words.join(' ');
+    lineSpans.push(secondLine);
+    textBlock.appendChild(secondLine);
+    
+    // Clean up temp element
+    document.body.removeChild(tempDiv);
+    
+    // Observe text block for animation trigger
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Animate each line with staggered delay
+                lineSpans.forEach((line, index) => {
+                    setTimeout(() => {
+                        line.style.transition = 'all 0.8s ease-out';
+                        line.style.transform = 'translateY(0)';
+                        line.style.filter = 'blur(0px)';
+                        line.style.opacity = '1';
+                    }, index * 200 + 300); // 200ms delay between lines, 300ms initial delay
+                });
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    observer.observe(textBlock.closest('.text-block-section'));
+}
+
 // Export functions for external use
 window.CorsairAI = {
     showNotification,
     initScrollAnimations,
     initNavigation,
     initCustomCursor,
-    initAnimatedWord
+    initAnimatedWord,
+    initTextBlockAnimation
 };
