@@ -631,6 +631,83 @@ body, html {
     /* REMOVED: overflow-x: hidden !important; - was breaking sticky */
 }
 
+/* ===============================================
+   TEXT BLOCK SECTION - Centered content
+   =============================================== */
+
+.text-block-section {
+    height: 650px;
+    background: var(--color-black);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-block-content h2 {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.text-block-content p {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Responsive adjustments for text block */
+@media screen and (max-width: 768px) {
+    .text-block-section {
+        height: 520px;
+    }
+    
+    .text-block-content {
+        padding: 0 1.5rem;
+    }
+    
+    .text-block-content h2 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    
+    .text-block-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-block-section {
+        height: 455px;
+    }
+    
+    .text-block-content {
+        padding: 0 1rem;
+    }
+    
+    .text-block-content h2 {
+        font-size: 40px;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+    }
+    
+    .text-block-content p {
+        font-size: 1rem;
+    }
+}
+
 /* Browser compatibility for sticky positioning - Only for our sticky elements */
 
 /* Layered Cards Section Styles */
